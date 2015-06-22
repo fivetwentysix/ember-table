@@ -251,7 +251,8 @@ StyleBindingsMixin, ResizeHandlerMixin, {
   expandRowHeight: function() {
     var oldHeight = this.get('rowHeight');
     var expandRows = this.get('expandRows');
-    if (!this.get('originalHeight')) {
+    var originalHeight = this.get('originalHeight');
+    if (!originalHeight) {
       this.set('originalHeight', oldHeight);
     }
     if (expandRows === true) {
